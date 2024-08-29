@@ -2,7 +2,7 @@
   "name": "cv-kamal",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://kamalMakarim.github.io/portfolio",
+  "homepage": "https://kamalmakarim.github.io/portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
