@@ -1,20 +1,15 @@
-# Use the latest LTS version of Node.js
 FROM node:18-alpine
- 
-# Set the working directory inside the container
-WORKDIR /app
- 
-# Copy package.json and package-lock.json
-COPY package*.json ./
- 
-# Install dependencies
+
+WORKDIR /PORTFOLIO
+
+COPY package.json .
+
 RUN npm install
- 
-# Copy the rest of your application files
+
 COPY . .
- 
-# Expose the port your app runs on
-EXPOSE 4173
- 
-# Define the command to run your app with --host
-CMD ["npm", "run", "preview", "--", "--host"]
+
+ENV PORT=8080
+
+EXPOSE 8080
+
+CMD [ "npm", "run", "dev"]
